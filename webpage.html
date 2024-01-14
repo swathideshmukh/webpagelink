@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=50.0">
+    <title>Login Page</title>
+</head>
+<body>
+
+    <h2>Login Page</h2>
+    
+    <form id="loginForm">
+        <label for="question">Are u student of ISE-D? Answer this simple question to login !</label><br>
+	<label for="question">choose the correct statement</label><br>
+        <input type="radio" id="WE KNOW THAT" name="answer" value="WE KNOW THAT">
+        <label for="WE KNOW THAT">WE KNOW THAT</label><br>
+        <input type="radio" id="WE NOW THAT" name="answer" value="WE NOW THAT">
+        <label for="WE NOW THAT">WE NOW THAT</label><br>
+        <button type="button" onclick="checkLogin()">Login</button>
+    </form>
+
+    <script>
+        function checkLogin() {
+            var selectedOption = document.querySelector('input[name="answer"]:checked');
+
+            if (selectedOption && selectedOption.value === "WE NOW THAT") {
+            window.location.replace("index.html");
+} else {
+                alert("Oops, looks like u bunked veeru sir's classes:)");
+            }
+        }
+    </script>
+
+</body>
+</html>
+
